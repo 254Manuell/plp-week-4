@@ -1,0 +1,42 @@
+def sort_list_of_dictionaries(data_list, sort_key, reverse=False):
+    """
+    Sorts a list of dictionaries by a specific key.
+
+    Args:
+        data_list (list): The list of dictionaries to be sorted.
+        sort_key (str): The key within each dictionary to sort by.
+        reverse (bool, optional): If True, sort in descending order. Defaults to False (ascending).
+
+    Returns:
+        list: A new sorted list of dictionaries.
+    """
+    return sorted(data_list, key=lambda d: d[sort_key], reverse=reverse)
+
+# Example usage:
+if __name__ == "__main__":
+    students = [
+        {"name": "Alice", "age": 25, "grade": "A"},
+        {"name": "Bob", "age": 22, "grade": "B"},
+        {"name": "Charlie", "age": 28, "grade": "A"},
+        {"name": "David", "age": 22, "grade": "C"},
+    ]
+
+    # Sort by age in ascending order
+    sorted_by_age = sort_list_of_dictionaries(students, "age")
+    print("Sorted by age (ascending):")
+    for student in sorted_by_age:
+        print(student)
+
+    # Sort by name in descending order
+    sorted_by_name_desc = sort_list_of_dictionaries(students, "name", reverse=True)
+    print("\nSorted by name (descending):")
+    for student in sorted_by_name_desc:
+        print(student)
+
+    # Sort by grade (ascending), then by age (ascending) for ties
+    # This requires a slightly different approach, sorting multiple times or using a tuple as key
+    # Example for multiple keys:
+    sorted_by_grade_and_age = sorted(students, key=lambda d: (d["grade"], d["age"]))
+    print("\nSorted by grade then age:")
+    for student in sorted_by_grade_and_age:
+        print(student)

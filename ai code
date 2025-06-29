@@ -1,0 +1,28 @@
+def sort_list_of_dictionaries(data_list, sort_key, reverse=False):
+    """
+    Sort a list of dictionaries by a specific key.
+    """
+    return sorted(data_list, key=lambda item: item[sort_key], reverse=reverse)
+
+if __name__ == "__main__":
+    students = [
+        {"name": "Alice", "age": 25, "grade": "A"},
+        {"name": "Bob", "age": 22, "grade": "B"},
+        {"name": "Charlie", "age": 28, "grade": "A"},
+        {"name": "David", "age": 22, "grade": "C"},
+    ]
+
+    # Sort by age (ascending)
+    print("Sorted by age (ascending):")
+    for student in sort_list_of_dictionaries(students, "age"):
+        print(student)
+
+    # Sort by name (descending)
+    print("\nSorted by name (descending):")
+    for student in sort_list_of_dictionaries(students, "name", reverse=True):
+        print(student)
+
+    # Sort by grade, then by age
+    print("\nSorted by grade then age:")
+    for student in sorted(students, key=lambda d: (d["grade"], d["age"])):
+        print(student)
