@@ -1,169 +1,175 @@
-# Task 1: AI-Powered Code Completion
+# Power Learn Project: AI for Software Engineering (Week 4 Assignment) 🚀
 
-## 🛠️ Tool Used
-- **Code Completion Tool:** GitHub Copilot (or Tabnine)
+**Group 21**
+**Members:** Brilliant Mwendwa, Lowell Owuor, Emmanuel Baraka, Teddy Brian
 
-## 📝 Task Overview
-This project demonstrates how to sort a list of dictionaries in Python by a specific key. It includes:
-- A manual implementation of the sorting function.
-- An example of AI-suggested code (from Copilot/Tabnine).
-- A comparison of both approaches in terms of efficiency.
+---
 
-## 📄 Code Summary
+## Table of Contents 📚
 
-The main function:
-```python
-def sort_list_of_dictionaries(data_list, sort_key, reverse=False):
-    """
-    Sort a list of dictionaries by a specific key.
-    """
-    return sorted(data_list, key=lambda item: item[sort_key], reverse=reverse)
+1. [Project Overview 🎯](#project-overview)
+2. [Part I: Theoretical Analysis 🧠](#part-i-theoretical-analysis)
+
+   * [Q1: AI-Driven Code Generation Tools 🤖](#q1-ai-driven-code-generation-tools)
+   * [Q2: Supervised vs. Unsupervised Learning in Bug Detection 🐛](#q2-supervised-vs-unsupervised-learning-in-bug-detection)
+   * [Q3: Bias Mitigation for AI-Powered UX Personalization ⚖️](#q3-bias-mitigation-for-ai-powered-ux-personalization)
+   * [AIOps Case Studies 📈](#aiops-case-studies)
+3. [Part II: Practical Implementation 🛠️](#part-ii-practical-implementation)
+
+   * [Task 1: AI-Powered Code Completion ✍️](#task-1-ai-powered-code-completion)
+   * [Task 2: Automated Testing with Katalon Studio ✅](#task-2-automated-testing-with-katalon-studio)
+   * [Task 3: Predictive Analytics for Resource Location 📊](#task-3-predictive-analytics-for-resource-location)
+4. [Part III: Ethical Considerations 🤝](#part-iii-ethical-considerations)
+5. [Bonus: AI-Powered Code Review Coach Proposal 💡](#bonus-ai-powered-code-review-coach-proposal)
+6. [Project Structure 📂](#project-structure)
+7. [Getting Started 🏁](#getting-started)
+8. [License 📝](#license)
+
+---
+
+## Project Overview 🎯
+
+This repository contains the Week 4 deliverables for the **AI for Software Engineering** course, showcasing both theoretical analyses and practical applications of AI-driven tools in software development. The assignment is divided into three parts:
+
+* **Part I:** In-depth comparison and discussion of AI techniques and their impacts.
+* **Part II:** Hands-on implementations demonstrating AI-powered code completion, automated testing, and predictive analytics.
+* **Part III:** Ethical reflection on deploying AI models in real-world scenarios.
+
+---
+
+## Part I: Theoretical Analysis 🧠
+
+### Q1: AI-Driven Code Generation Tools 🤖
+
+* **Benefits:**
+
+  * **Boilerplate Automation 🔄:** CRUD endpoints, configuration files—reduces repetitive coding.
+  * **Context-Aware Suggestions 💡:** Inline completions based on existing code and comments.
+  * **On-the-Fly Documentation 📑:** Auto-generated docstrings and type hints.
+  * **Faster Reviews & Merges ⚡:** Higher-quality initial code yields quicker PR approvals.
+* **Limitations:**
+
+  * Hallucinations (buggy code), security/license risks, limited architectural understanding, skill atrophy, domain specificity, data privacy concerns.
+
+### Q2: Supervised vs. Unsupervised Learning in Bug Detection 🐛
+
+* **Supervised:**
+
+  * Requires labeled datasets; high precision/recall on known bug types; can localize errors.
+  * Drawbacks: annotation cost, class imbalance, limited generalization.
+* **Unsupervised:**
+
+  * Uses anomaly detection on clean code corpora; no labels needed; broad coverage for novel bugs.
+  * Drawbacks: high false positives, less actionable insight, threshold tuning.
+* **Recommendation:** Combine both—use unsupervised to surface issues, then supervised models on critical modules.
+
+### Q3: Bias Mitigation for AI-Powered UX Personalization ⚖️
+
+* **Why It Matters:** Fairness, legal compliance (e.g., GDPR), user trust, market reach, robustness.
+* **Key Strategies:** Data auditing & rebalancing; fairness-aware objectives; controlled exploration (bandits); post-hoc score calibration; transparency & user control.
+
+### AIOps Case Studies 📈
+
+1. **Predictive CI/CD & Smart Rollbacks 🔄:**
+
+   * Example: CircleCI ranks tests by failure risk; Harness auto-rollback on anomalies.
+2. **Automated Canary Deployments & Resource Optimization 🚀:**
+
+   * Example: Netflix’s AI-driven canary analysis and dynamic scaling.
+
+---
+
+## Part II: Practical Implementation 🛠️
+
+### Task 1: AI-Powered Code Completion ✍️
+
+* **Manual vs. AI:** Both implementations use `sorted()` with lambda keys for sorting student records by age, name, and grade.
+* **Observations:** Identical performance (O(n log n)); AI code is more concise; manual code features more detailed docstrings.
+* **Conclusion:** Choose the variant that balances readability and maintainability for your team.
+
+### Task 2: Automated Testing with Katalon Studio ✅
+
+* **Tool:** Katalon Studio v10.2.2 on Windows 10.
+* **Workflows:** Valid and invalid login tests recorded via Web Recorder.
+* **Outcomes:**
+
+  * `TC_ValidLogin` passed in \~20.9s;
+  * `TC_InvalidLogin` failed in \~16.8s.
+* **Insights:** Self-healing locators and smart waits reduce flaky tests and maintenance.
+
+### Task 3: Predictive Analytics for Resource Location 📊
+
+* **Pipeline:**
+
+  1. Image preprocessing (resize to 64×64×3, flatten).
+  2. Train/Test split (80/20 stratified).
+  3. Random Forest (100 trees).
+* **Results:** 81.ic% accuracy; weighted F1 of 80.4%; minority-class recall of 52%.
+* **Future Work:** CNN-based feature extraction, systematic hyperparameter tuning, data augmentation, fairness auditing with IBM AIF360.
+
+---
+
+## Part III: Ethical Considerations 🤝
+
+* **Dataset Biases:** Class imbalance, demographic/acquisition bias, feature extraction bias.
+* **Mitigation (IBM AIF360):** Bias metrics dashboards, pre-processing reweighting, adversarial debiasing, post-hoc calibration.
+
+---
+
+## Bonus: AI-Powered Code Review Coach Proposal 💡
+
+* **Purpose:** Context-aware, real-time feedback in PR workflows.
+* **Workflow:**
+
+  1. Integrate with GitHub/GitLab.
+  2. Analyze diffs against best practices & historical comments.
+  3. Generate actionable suggestions & explanations.
+  4. Interactive clarifications & pattern lookup.
+  5. Continuous learning from accepted/rejected feedback.
+* **Impact:** Improved code quality, faster onboarding, reduced reviewer fatigue, scalable knowledge sharing.
+
+---
+
+## Project Structure 📂
+
+```
+├── part1/                # Theoretical write-ups (PDFs, slides)
+├── part2/                # Code and test scripts
+│   ├── code_completion/
+│   ├── katalon_tests/
+│   └── predictive_model/
+└── part3/                # Ethical reflection and fairness notebooks
+README.md
 ```
 
-### Usage Examples
-- **Sort by age (ascending)**
-- **Sort by name (descending)**
-- **Sort by grade, then by age**
+---
 
-### Example Output
-The script prints the sorted student dictionaries for each case.
+## Getting Started 🏁
 
-## 🤖 AI vs Manual Implementation
+1. **Clone the repository**:
 
-Both the manual and AI-suggested implementations use Python’s built-in `sorted()` function with a lambda for the key. For multi-key sorting, a tuple is used in the lambda. The AI-suggested code is nearly identical to the manual version, showing that this is a standard Python approach.
+   ```bash
+   git clone https://github.com/<your-org>/power-learn-ai-swe.git
+   cd power-learn-ai-swe
+   ```
+2. **Install dependencies** (Python 3.8+):
 
-## ⚡ Efficiency
+   ```bash
+   pip install -r part2/predictive_model/requirements.txt
+   ```
+3. **Run examples**:
 
-- Both versions are equally efficient, leveraging Python’s optimized sorting.
-- No significant performance difference exists, as both use the same algorithm and idioms.
+   * Code completion scripts in `part2/code_completion`.
+   * Katalon test suite in `part2/katalon_tests`.
+   * Train predictive model:
 
-## 🏆 Conclusion
-
-- Both manual and AI-generated solutions are Pythonic and efficient.
-- AI tools like Copilot or Tabnine can help you quickly write such utility functions, but understanding the logic is important for customization and debugging.
+     ```bash
+     python part2/predictive_model/train.py
+     ```
 
 ---
 
-✨ **Happy Coding!** ✨
+## License 📝
 
-# Task 3: Predictive Analytics for Resource Allocation 🩺
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-## 📋 Goal
-
-- **Preprocess data:** Clean images, encode labels, and split into training/testing sets.
-- **Train a model:** Use a Random Forest classifier to predict breast cancer priority (high/low).
-- **Evaluate:** Assess model performance using accuracy and F1-score.
-- **Deliverable:** Jupyter Notebook with code, visualizations, and performance metrics.
-- **Ethical Reflection:** Discuss dataset bias and fairness tools.
-
----
-
-## 🛠️ Workflow Overview
-
-1. **Import Dependencies:** Load Python libraries for data handling, image processing, and machine learning.
-2. **Load Raw Image Data:** Read and label images from the dataset directory.
-3. **Clean the Data:** Remove images that are too small or failed to load.
-4. **Preprocess & Extract Features:** Resize images and flatten them into feature vectors.
-5. **Encode Labels:** Map 'benign' and 'malignant' to 'low' and 'high' priority, then encode numerically.
-6. **Split Dataset:** Divide data into training and test sets.
-7. **Train the Model:** Fit a Random Forest classifier on the training data.
-8. **Evaluate Performance:** Calculate accuracy, F1-score, and display a classification report.
-9. **Visualize Predictions:** Show a grid of test images with true and predicted labels, highlighting correct and incorrect predictions.
-10. **Model Parameters:** Display information about the trained Random Forest.
-
----
-
-## 📊 Performance Metrics
-
-- **Accuracy:** Measures the proportion of correct predictions.
-- **F1 Score:** Weighted average of precision and recall, useful for imbalanced datasets.
-- **Classification Report:** Detailed breakdown of model performance by class.
-
----
-
-## 🧑‍⚖️ Ethical Reflection
-
-### Potential Biases
-
-- **Dataset Bias:** If certain categories (e.g., 'benign' or 'malignant') are underrepresented, the model may perform poorly on those cases.
-- **Sampling Bias:** If images come from a limited demographic or imaging device, predictions may not generalize.
-- **Labeling Bias:** Human error or subjective labeling can introduce inaccuracies.
-
-### Addressing Bias with Fairness Tools
-
-- **IBM AI Fairness 360:** This toolkit can help detect and mitigate bias in datasets and models. It provides metrics to assess fairness and algorithms to reduce disparate impact.
-    - **Example:** Use fairness metrics to check if the model's accuracy is consistent across different subgroups (e.g., age, gender, imaging device).
-    - **Mitigation:** Apply reweighting or adversarial debiasing to improve fairness.
-
----
-
-## 📁 Deliverable
-
-- **Jupyter Notebook:** Contains all code, visualizations, and performance metrics for reproducibility and review.
-
----
-
-✨ **For best results, ensure your dataset is balanced and consider using fairness tools to audit and improve your model!**
-# Innovation Challenge Proposal: Contextual AI for Autonomous Documentation (DocuSynth AI) ✨
-
-## Tool's Purpose: Addressing the Documentation Deficit in Modern SDLCs 🚧📚
-
-**Problem Statement:** In contemporary software development lifecycles (SDLCs), particularly within complex, distributed, and rapidly evolving microservices architectures, the maintenance of accurate, comprehensive, and relevant documentation remains a pervasive and critical challenge. 😫 Traditional documentation efforts are inherently reactive, labor-intensive, and prone to decay, leading to:
-* **Accelerated Technical Debt:** Documentation drifts from code reality, hindering maintainability and increasing the cost of change. 📉
-* **Impeded Onboarding & Knowledge Transfer:** New team members face steep learning curves, impacting productivity and increasing ramp-up time. 🐢
-* **Reduced Operational Efficiency:** Debugging, incident response, and cross-team collaboration are hampered by a lack of clear system understanding. 🚨
-* **Compliance & Audit Risks:** Insufficient documentation can pose significant risks in regulated environments. ⚖️
-
-**Proposed AI Tool: DocuSynth AI** 🤖✨ is an intelligent, autonomous documentation generation and maintenance platform. It is designed to proactively infer, synthesize, and update technical documentation by leveraging advanced AI techniques applied directly to source code, commit histories, and system runtime data. DocuSynth AI aims to transform documentation from a human-driven, often neglected chore into an integrated, self-sustaining component of the continuous integration/continuous deployment (CI/CD) pipeline. 🚀
-
-## Workflow: An Integrated, Context-Aware Documentation Engine 🧠🔗
-
-DocuSynth AI operates as a robust, multi-stage pipeline, deeply integrated into the development ecosystem:
-
-1.  **Code & Repository Ingestion:** 📥
-    * **Source Integration:** Connects directly with enterprise version control systems (Git, GitHub, GitLab, Bitbucket) and artifact repositories (Nexus, Artifactory). 🔗
-    * **Event-Driven Triggers:** Initiates analysis upon defined events: commit pushes, pull request merges, branch updates, or scheduled intervals. 🔔
-    * **Language Agnostic Parsing:** Utilizes sophisticated Abstract Syntax Tree (AST) parsers for diverse languages (Python, Java, Go, TypeScript, C#) to extract structural components (classes, functions, methods, interfaces, modules). 🌳
-
-2.  **Multi-Modal Contextual Analysis (AI Core):** 🔬📊
-    * **Static Code Analysis (Semantic Understanding):** 💻
-        * **Natural Language Processing (NLP) on Code:** Applies advanced transformer models (fine-tuned for code semantics) to analyze identifiers (variable names, function names), comments, and existing docstrings to infer their intent and purpose. 💡
-        * **Control Flow & Data Flow Analysis:** Traces variable lifecycles, function calls, and logical branches to understand data transformations and execution paths. 🌊
-        * **Dependency Mapping:** Identifies inter-module, inter-service, and external library dependencies. 🕸️
-    * **Dynamic Runtime Analysis (Observability Integration):** 📈
-        * **Telemetry Integration:** Ingests data from APM tools (e.g., Dynatrace, New Relic, Datadog), logging frameworks, and distributed tracing systems (e.g., OpenTelemetry). 📡
-        * **Behavioral Pattern Recognition:** AI algorithms analyze runtime data to identify actual usage patterns, common execution paths, performance characteristics, and real-world API interactions, adding a crucial layer of context often missing from static analysis. 🔍
-    * **Commit History & Issue Tracker Analysis:** 📜
-        * **Contextual Reconciliation:** Processes Git commit messages and links to issue tracker (Jira, Azure DevOps) entries to understand *why* a change was made, associating code modifications with their business rationale or bug fixes. ✅
-        * **Authoritative Source Identification:** Learns which parts of the codebase are frequently modified together or by specific teams/individuals. 🎯
-
-3.  **Adaptive Documentation Generation:** ✍️✨
-    * **Generative AI Models:** Utilizes large language models (LLMs) specialized in technical writing to synthesize coherent, grammatically correct, and contextually rich documentation. 📝
-    * **Configurable Output Formats:** Generates documentation in preferred formats (e.g., Markdown, reStructuredText, OpenAPI/Swagger specifications, Javadoc, XML comments) tailored to project standards. 📄
-    * **Tiered Documentation:** Capable of generating various levels of documentation:
-        * **Inline Code Comments/Docstrings:** For granular function/method level detail. ✍️
-        * **Module/Component Overviews:** Summaries of functionality, dependencies, and external interfaces. 🗺️
-        * **API Reference Guides:** Detailed endpoints, request/response schemas, authentication methods. 🔑
-        * **Architecture Diagrams (Conceptual):** Generates high-level descriptions for tooling to render diagrams. 🏗️
-
-4.  **Human Validation & Continuous Learning:** 🧑‍💻🔄
-    * **Pull Request Integration:** Proposes documentation updates as part of code review process (e.g., as a suggested change in a PR), allowing developers to review, accept, or modify. 👍👎
-    * **Feedback Loop:** Developer acceptance/rejection of AI-generated content serves as reinforcement learning, continuously fine-tuning the model's accuracy, style, and domain-specific vocabulary. 🧠📈
-    * **Conflict Resolution:** AI identifies discrepancies between code, existing docs, and runtime behavior, flagging areas for human intervention. 🚩
-
-5.  **Automated Deployment & Maintenance:** 📤⚙️
-    * **CI/CD Integration:** Publishes approved documentation to internal documentation portals (e.g., Confluence, Sphinx, MkDocs sites) or external developer portals. 🌐
-    * **Proactive Decay Detection:** Monitors existing documentation for staleness by comparing it against evolving code and runtime patterns, triggering AI-driven updates or flagging for human review. ⚠️
-
-## Impact: Strategic Value & ROI for Software Engineering Organizations 💰🚀
-
-DocuSynth AI offers transformative benefits, delivering significant ROI across the software development lifecycle:
-
-1.  **Accelerated Time-to-Market (TTM) by up to 20-30%:** By drastically reducing the time developers spend on documentation, teams can reallocate resources to innovation and core feature development, accelerating release cycles. ⏱️⏩
-2.  **Enhanced Code Maintainability & Reduced Defects (15-25%):** Accurate, omnipresent documentation leads to fewer misunderstandings, reduced integration errors, and faster root cause analysis during debugging, directly improving code quality and stability. 🛡️🐛
-3.  **Improved Onboarding Efficiency (50% reduction in ramp-up time):** New hires gain contextual understanding of complex codebases much faster, becoming productive contributors in weeks rather than months. This is critical in high-turnover environments. 🎓⚡
-4.  **Mitigated Technical Debt Accumulation:** Proactive, AI-driven updates prevent documentation from becoming obsolete, preserving institutional knowledge and reducing future refactoring risks. This is a crucial shift from reactive "doc sprints." 🧹✨
-5.  **Strengthened Compliance & Audit Readiness:** Automatically generated and version-controlled documentation provides an auditable trail of system knowledge, critical for regulatory compliance (e.g., FinTech, Healthcare). ✅🔐
-6.  **Empowered Development Culture:** Shifting documentation burden allows engineers to focus on challenging problems, fostering a more engaging and productive work environment. This combats developer burnout associated with repetitive, non-core tasks. 🥳👩‍💻
-
-DocuSynth AI moves beyond mere automation; it embodies an intelligent, self-adapting documentation paradigm that addresses a fundamental and costly bottleneck in modern software engineering, fostering an era of truly self-documenting and intelligently maintained codebases. 🌟
